@@ -40,7 +40,7 @@ Node * AddAtIndex(Node * head, Node * tail, int value, int index) {
         cout << "invalid index" << endl;
     }
     else if (index == 0) {
-        return addFirst(head, tail, value);
+        return addFirst(head, value);
     }
     else {
         for (int i = 0; i < index; i++) {
@@ -306,7 +306,7 @@ int length(Node * head) {
     return size;
 }
 
-Node * addLLhelper(Node * head1, int pv1, Node * head2, int pv2, Node * res) {
+int addLLhelper(Node * head1, int pv1, Node * head2, int pv2, Node * res) {
     if (head1 == NULL && head2 == NULL) {
         return 0;
     }
