@@ -247,6 +247,8 @@ Node* add2LL(Node * l1, Node * l2) {
         carry = sum/10;
         itr->next = new Node(ld);
         itr = itr->next;
+        if (r1) r1 = r1->next;
+        if (r2) r2 = r2->next;
     }
     return reverse(dummy->next);
 }
